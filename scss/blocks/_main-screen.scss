@@ -1,0 +1,102 @@
+.main-screen {
+  padding: 134px 0 94px 0;
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-bottom: 100px;
+  @include tablet {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 20px;
+  }
+  &::before {
+    z-index: 1;
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    width: 75%;
+    height: 100%;
+    background: linear-gradient(44.11deg, #CD10FF 15.75%, #9F06FF 84.63%);
+    mix-blend-mode: normal;
+    opacity: 0.05;
+    border-radius: 0px 20px 20px 0px;
+    @include tablet {
+        width: 100%;
+      }
+  }  
+
+    &__container {
+        z-index: 2;
+    }
+
+    &__title {
+        @include text ($font-secondary,700,60px,68px,$color-text-primary );
+        letter-spacing: -1px;
+        margin-bottom: 20px;
+    }
+
+    &__desc {
+        @include text ($font-primary,400,20px,30px,$color-text-secondary );
+        margin-bottom: 40px;
+    }
+
+    &__video {
+        position: absolute;
+        right: 0;
+        cursor: pointer;
+        z-index: 3;
+        @include desktop-small {
+            position: static;
+        }
+        
+    }
+
+    &__info {
+        max-width: 560px;
+    }
+
+    &__students {
+        margin-top: 100px;
+
+    }
+}
+
+
+.students {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    &__list {
+        display: flex;
+        align-items: center;
+    }
+
+    &__img {
+        border: 4px solid #F4F9FA;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        &:not(:first-child) {
+            margin-left: -20px;
+          
+        }
+    }
+
+    &__text {
+        @include text($font-primary,400,16px,20px,$color-text-secondary );
+        span {
+            color: $color-grad-1;
+        }
+    }
+}

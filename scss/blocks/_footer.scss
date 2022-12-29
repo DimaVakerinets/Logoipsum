@@ -1,0 +1,76 @@
+.footer {
+    background: rgba(205, 16, 255, 0.05);
+    &__wrapper {
+        padding: 80px 0;
+    }
+
+    &__header {
+     display: grid;
+     grid-template-columns: 25% 75%;
+     align-items: center;
+     margin-bottom: 50px;
+    }
+
+    &__logo {
+    }
+
+    &__form {
+        padding: 0;
+        position: relative;
+    }
+
+    &__input {
+        width: 100%;
+        background: $color-white;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.0501257);
+        border-radius: 33px;
+        border: 0;
+        outline: 0;
+        padding: 23px 0 23px 40px;
+        padding-right: 180px;
+        @include text($font-primary, 400, 16px, 20px, $color-text-secondary);
+        &::placeholder {
+            @include text($font-primary, 400, 16px, 20px, rgba(79, 89, 106, 1));
+        }
+    }
+
+    &__btn {
+        position: absolute;
+        padding: 15px 30px;
+        border: 0;
+        outline: 0;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    &__link {
+      color: $color-white;
+    }
+
+    &__item {
+        padding: 0 254px 0 234px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    &__info-primary {
+    }
+
+    &__title {
+        @include text($font-primary, 700, 16px, 20px, $color-text-primary);
+        margin-bottom: 20px;
+    }
+
+    &__menu {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        max-height: 180px;
+    }
+
+    &__li {
+        @include text($font-primary, 400, 16px, 20px, $color-text-secondary);
+        margin-bottom: 20px;
+    }
+}

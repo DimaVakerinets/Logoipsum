@@ -1,0 +1,78 @@
+.counter {
+
+position: relative;
+margin-bottom: 150px;
+    &__item {
+        padding: 20px 125px;
+        text-align: center;
+        &:not(:last-child) {
+            border: 1px solid $color-border;
+        }
+        @include desktop-small {
+            border-right: 0;
+            &:not(:last-child) {
+                border-bottom: 1px solid $color-border;
+            }
+            
+        }
+        
+    }
+
+    &__amount {
+        margin-bottom: 2px;
+        @include text ($font-secondary,700,40px,50px,$color-text-primary );
+    }
+
+    &__title {
+        @include text ($font-primary,400,16px,20px,$color-text-primary ); 
+    }
+
+    &__circle {
+        border-radius: 50%;
+        position: absolute;
+        
+        &._big {
+            width: 288px;
+            height: 288px;
+            background: linear-gradient(44.11deg, #CD10FF 15.75%, #9F06FF 84.63%);
+            left: -206px;
+            top: 20px;
+            z-index: 1;
+
+        }
+
+        &._small {
+            width: 86px;
+            bottom: -136px;;
+            background:$color-grad-secondary;
+            left: 0;
+            height: 86px;
+            z-index: 2;
+
+
+        }
+    } 
+
+
+}
+
+
+.container {
+
+    &__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background:$color-white;
+    border: 1px solid $color-border;
+    border-radius: 21px;
+    padding: 30px 0;
+    z-index: 3;
+    position: relative;
+        @include desktop-small{
+            padding: 0;
+            grid-template-columns: 1fr;
+        }
+    }
+
+    
+}

@@ -1,0 +1,25 @@
+.instructor {
+ margin-bottom: 96px;
+
+    &__container {
+        display: flex;
+        gap: 170px;
+    }
+
+    &__text {
+    }
+
+    &__title {
+        @include text ($font-secondary,700,46px,56px,$color-text-primary );
+        width: 537px;
+        margin-bottom: 20px;
+    }
+
+    &__desc {
+        width: 560px;
+        @include text ($font-primary,400,20px,30px,$color-text-secondary );
+    }
+
+    &__img {
+    }
+}

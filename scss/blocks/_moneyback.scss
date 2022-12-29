@@ -1,0 +1,60 @@
+.moneyback {
+        position: relative;
+    &__desc {
+        @include text ($font-secondary,700,12px,17px,$color-grad-1);
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 2.57143px;
+        background-clip: text;
+        margin-bottom: 57px;
+         
+    }
+
+    &__text {
+        text-align: center;
+    }
+
+    &__title {
+        @include text($font-secondary, 700, 46px, 56px, $color-text-primary);
+        max-width: 650px;
+        margin-left: 237px;
+        margin-bottom: 30px;
+
+        
+    }
+    &__circle{
+        position: absolute;
+        border-radius: 50%;
+         &._big {
+            width: 355px;
+            height: 355px;
+            background: $color-grad-1;
+            right: -175px;
+            z-index: 1;
+         }
+
+         &._small {
+            width: 123px;
+            height: 123px;
+            background: $color-grad-secondary;
+            right: 97px;
+            z-index: 2;
+         }
+    }
+}
+
+
+.back {
+
+    &__wrapper {
+        text-align: center;
+    }
+}
+.btn {
+
+    &__moneyback {
+        margin-bottom: 120px;
+    }
+}
+
+

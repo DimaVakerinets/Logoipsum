@@ -1,0 +1,106 @@
+.header {
+    
+    &__wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    gap: 50px;
+    }
+
+      &__logo {
+          
+          @include text ($font-primary,700,28px,33px,$color-text-primary );
+            
+      }
+      &__burger {
+        display: none;
+        @include desktop-small {
+            display: block;
+        }
+        
+      }
+      &-nav {
+        flex-grow: 1;
+        display: flex;
+        .material-icons {
+            display: none;
+            @include desktop-small {
+               display: block;
+               position: absolute;
+               top: 40px;
+               right: 40px;
+          }
+        
+        }
+          &__ul {
+            flex-grow: 1;
+              padding: 0;
+              display: flex;
+              align-items: center;
+              gap: 24px;
+              justify-content: space-between
+  
+          }
+
+          &__row {
+              display: flex;
+              align-items: center;
+              gap: 51px;
+              @include desktop-small {
+                flex-direction: column;
+                &:not(:last-child) {
+                  margin-bottom: 30px;
+                }
+                
+              }
+              
+
+          }
+  
+      
+          &__a {
+              @include text ($font-primary,700,16px,20px,$color-text-primary );
+              transition: $transition;
+              &._active,&:hover {
+                  color:$color-text-primary;
+                  @include desktop-small {
+                    color: $color-white;
+                    
+                  }
+              }
+              }
+             
+
+          @include desktop-small {
+            position: fixed;
+            z-index: 9;
+            width: 100%;
+            left: 0;
+            top: 0;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            transform: translateX(-150%);
+            transition: $transition;
+
+            .header-nav__ul {
+                height: 100%;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+            .header-nav__a {
+                font-size: 30px;
+            }
+            
+          }
+          &._active {
+            transform: translateX(0);
+
+          }
+    }  
+}
+
+
+

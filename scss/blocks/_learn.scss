@@ -1,0 +1,105 @@
+.learn {
+    position: relative;
+    margin-bottom: 240px;
+
+    &__container {
+       
+    }
+
+    &__title {
+        @include text ($font-secondary,700,46px,56px,$color-text-primary );
+        text-align: center;
+        margin-bottom: 20px;
+ 
+
+
+    }
+
+    &__desc {
+        @include text ($font-primary,400,20px,30px,$color-text-secondary );
+        text-align: center;
+        margin-bottom: 60px;
+        width:560px;
+        margin-left: 277px;
+        
+
+        
+    }
+
+    &__item {
+        width: 1120px;
+        display: flex;
+        gap: 32px;
+        align-items: center;
+        margin-bottom: 30px
+        
+    }
+
+    &__blokc {
+       
+        
+        
+    }
+
+    &__subtext {
+        @include text ($font-primary,400,16px,24px,$color-text-secondary );
+        width: 501px;
+        
+    }
+
+    &__circle {
+        position: absolute;
+        border-radius: 50%;
+        width: 382px;
+        height: 382px;
+        right: -120px;
+        top: -120px;
+         background: $color-grad-secondary;
+        
+        &._big {
+        
+          
+        
+            
+
+            
+            
+        }
+            
+    }
+
+  
+
+    .btn {
+
+		&__learn {
+                margin-left: 255px;
+		}
+}
+
+}
+.container {
+}
+
+.icom-learn {
+    width: 40px;
+    height: 33px;
+    gap: 20px;
+    
+   
+}
+
+.text-centr {
+    text-align: center;
+
+}
+.text {
+
+    &__text {
+        @include text ($font-primary,700,24px,24px,$color-text-primary );
+        margin-bottom: 20px;
+        
+    }
+}
+
+
